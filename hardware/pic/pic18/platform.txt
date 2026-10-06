@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------------------
+# Plataforma PIC18F para Arduino IDE (compila con XC8 + DFP PIC18Fxxxx)
+# ---------------------------------------------------------------------------
+
+name=PIC18F (XC8)
+version=1.0.0
+
+compiler.path=/usr/bin/
+
+# Preprocesado: wrapper con clang que incluye core + pic_libraries (deteccion de libs)
+recipe.preproc.macros={runtime.platform.path}/preproc_wrapper.sh "{build.core.path}" "{build.f_cpu}" "{source_file}" "{preprocessed_file_path}" "{runtime.platform.path}"
+
+# Objetos: no-op (XC8 compila todo junto en el enlace)
+recipe.c.o.pattern=/usr/bin/true
+recipe.cpp.o.pattern=/usr/bin/true
+recipe.ar.pattern=/usr/bin/true
+
+# Enlace real con el wrapper (autodetecta XC8/DFP18)
+recipe.c.combine.pattern={runtime.platform.path}/compile_wrapper.sh "{build.mcu}" "{build.f_cpu}" "{build.core.path}" "{build.path}/sketch/{build.project_name}.cpp" "{build.path}/{build.project_name}.elf" "{runtime.platform.path}"
+
+# XC8 genera el .hex junto al .elf
+recipe.objcopy.hex.pattern=/usr/bin/true
+
+# Reporte de tamanio real
+recipe.size.pattern={runtime.platform.path}/size_report.sh "{build.path}/{build.project_name}.hex"
+recipe.size.regex=Program:\s*([0-9]+)\s*bytes
+
+# Grabado por USB con bootloader (Python autodetectado)
+tools.tinybld.upload.pattern={runtime.platform.path}/upload_wrapper.sh "{serial.port}" "{build.path}/{build.project_name}.hex" "{runtime.platform.path}"
+tools.tinybld.upload.params.verbose=
+tools.tinybld.upload.params.quiet=

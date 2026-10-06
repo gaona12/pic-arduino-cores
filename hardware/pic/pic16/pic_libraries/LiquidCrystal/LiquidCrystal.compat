@@ -1,0 +1,7 @@
+name=LiquidCrystal
+descripcion=LCD 16x2 HD44780 en modo 4 bits (pines directos)
+requires=DIGITAL
+min_ram=16
+min_flash=1024
+chips_excluidos=16F84A    # muy poca RAM para el LCD completo
+nota=RS=8,EN=9,D4..D7=10..13 por defecto. Ya incluida en el core.

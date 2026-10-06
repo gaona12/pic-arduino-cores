@@ -1,0 +1,16 @@
+# Servo.map - mapa para el transpilador Nivel 2.
+# Declara como traducir la sintaxis de objeto de esta libreria a funciones C.
+#
+# Formato (una directiva por linea):
+#   class=NombreDeClase         -> el tipo que el usuario declara (Servo miServo;)
+#   prefix=Prefijo_             -> prefijo de las funciones C (Servo_)
+#   ctor=NombreFuncionInit      -> (opcional) funcion a llamar por el constructor;
+#                                   si se omite, el constructor no emite llamada.
+#
+# Con esto, el transpilador convierte:
+#   Servo s;              -> (registra que 's' es de tipo Servo; sin ctor: nada)
+#   s.attach(9);          -> Servo_attach(9);
+#   s.write(90);          -> Servo_write(90);
+class=Servo
+prefix=Servo_
+# sin ctor: 'Servo s;' no genera llamada (attach hace la inicializacion)

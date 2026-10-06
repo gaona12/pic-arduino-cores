@@ -1,0 +1,38 @@
+# Compiled tools (they auto-compile with clang on each machine)
+# Herramientas compiladas (se auto-compilan con clang en cada maquina)
+hardware/pic/*/tools/transpile
+hardware/pic/*/tools/libcheck
+hardware/pic/*/tools/tinybld_load
+
+# Build artifacts / Artefactos de compilacion
+*_build/
+*.o
+*.elf
+*.d
+*.lst
+*.map.xc8
+*.sdb
+*.cof
+*.sym
+
+# Keep source .hex bootloaders, ignore build .hex
+# Conservar los .hex de bootloader fuente, ignorar los .hex de build
+build/
+
+# macOS / editors
+.DS_Store
+.vscode/
+*.swp
+*~
+
+# Microchip caches (never commit these)
+.mchp_packs/
+funcinfo.txt
+startup.lst
+
+# Board Manager archives go to GitHub Releases, not the repo.
+# Los comprimidos del Board Manager van a GitHub Releases, no al repo.
+# (Keep package_pic_index.json tracked / se conserva el JSON)
+board-manager/*.tar.bz2
+board-manager/*.tar.gz
+board-manager/*.zip

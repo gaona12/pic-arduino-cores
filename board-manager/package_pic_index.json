@@ -1,0 +1,53 @@
+{
+  "packages": [
+    {
+      "name": "pic",
+      "maintainer": "gaona12 (PIC Arduino Cores)",
+      "websiteURL": "https://github.com/gaona12/pic-arduino-cores",
+      "email": "",
+      "help": { "online": "https://github.com/gaona12/pic-arduino-cores/issues" },
+      "platforms": [
+        {
+          "name": "PIC16F Boards (XC8)",
+          "architecture": "pic16",
+          "version": "1.1.0",
+          "category": "Contributed",
+          "help": { "online": "https://github.com/gaona12/pic-arduino-cores/issues" },
+          "url": "https://github.com/gaona12/pic-arduino-cores/releases/download/v1.0.0/pic16-1.1.0.tar.bz2",
+          "archiveFileName": "pic16-1.1.0.tar.bz2",
+          "checksum": "SHA-256:bfd8a4b14bed90556b384f8e5eed02d87480987dc93061ad8a97599bb0c195ae",
+          "size": "32478",
+          "boards": [
+            { "name": "PIC16F877A (JT40P)" }, { "name": "PIC16F887" },
+            { "name": "PIC16F886" }, { "name": "PIC16F876A" },
+            { "name": "PIC16F874A" }, { "name": "PIC16F873A" },
+            { "name": "PIC16F88" }, { "name": "PIC16F628A" },
+            { "name": "PIC16F84A" }, { "name": "PIC16F690" }
+          ],
+          "toolsDependencies": []
+        },
+        {
+          "name": "PIC18F Boards (XC8)",
+          "architecture": "pic18",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "help": { "online": "https://github.com/gaona12/pic-arduino-cores/issues" },
+          "url": "https://github.com/gaona12/pic-arduino-cores/releases/download/v1.0.0/pic18-1.0.0.tar.bz2",
+          "archiveFileName": "pic18-1.0.0.tar.bz2",
+          "checksum": "SHA-256:5d41318d71df16507ee89c4ec9e2f71e9e9494e3e4d180a1b17ad09688f0e2c6",
+          "size": "21806",
+          "boards": [
+            { "name": "PIC18F4550" }, { "name": "PIC18F2550" },
+            { "name": "PIC18F4455" }, { "name": "PIC18F2455" },
+            { "name": "PIC18F4520" }, { "name": "PIC18F2520" },
+            { "name": "PIC18F4620" }, { "name": "PIC18F2620" },
+            { "name": "PIC18F4525" }, { "name": "PIC18F452" },
+            { "name": "PIC18F458" }, { "name": "PIC18F4580" }
+          ],
+          "toolsDependencies": []
+        }
+      ],
+      "tools": []
+    }
+  ]
+}

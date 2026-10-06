@@ -1,0 +1,7 @@
+name=Wire
+descripcion=Comunicacion I2C (maestro) por hardware MSSP
+requires=MSSP
+min_ram=8
+min_flash=512
+chips_excluidos=16F628A,16F84A
+nota=SDA=RC4, SCL=RC3. Ya incluida en el core (no requiere instalar).

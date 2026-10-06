@@ -1,0 +1,178 @@
+# ---------------------------------------------------------------------------
+# Core PIC para Arduino IDE
+# Compila con MPLAB XC8 y graba por USB (bootloader) o por PICkit.
+#
+# NOTA: la grabacion por bootloader (tinybld) solo esta probada en el
+# PIC16F877A de la placa JT40P. Para otros chips usa un PICkit (ver README).
+# ---------------------------------------------------------------------------
+
+menu.crystal=Cristal
+
+# ============================================================
+# PIC16F877A (JT40P) - 40 pines, 8K, el de la placa principal
+# ============================================================
+jt40p.name=PIC16F877A (JT40P / bootloader USB)
+jt40p.upload.tool=tinybld
+jt40p.upload.protocol=tinybld
+jt40p.upload.maximum_size=7836
+jt40p.upload.maximum_data_size=368
+jt40p.build.mcu=16F877A
+jt40p.build.f_cpu=20000000UL
+jt40p.build.core=pic16
+jt40p.build.board=PIC16F877A
+jt40p.menu.crystal.20mhz=20 MHz
+jt40p.menu.crystal.20mhz.build.f_cpu=20000000UL
+jt40p.menu.crystal.8mhz=8 MHz
+jt40p.menu.crystal.8mhz.build.f_cpu=8000000UL
+jt40p.menu.crystal.4mhz=4 MHz
+jt40p.menu.crystal.4mhz.build.f_cpu=4000000UL
+
+# ============================================================
+# PIC16F887 - 40 pines, 8K, "mejorado" (muy usado en escuelas)
+# ============================================================
+p16f887.name=PIC16F887 (40 pines)
+p16f887.upload.tool=tinybld
+p16f887.upload.protocol=tinybld
+p16f887.upload.maximum_size=8192
+p16f887.upload.maximum_data_size=368
+p16f887.build.mcu=16F887
+p16f887.build.f_cpu=20000000UL
+p16f887.build.core=pic16
+p16f887.build.board=PIC16F887
+p16f887.menu.crystal.20mhz=20 MHz
+p16f887.menu.crystal.20mhz.build.f_cpu=20000000UL
+p16f887.menu.crystal.8mhz=8 MHz
+p16f887.menu.crystal.8mhz.build.f_cpu=8000000UL
+p16f887.menu.crystal.intosc=Interno 8 MHz
+p16f887.menu.crystal.intosc.build.f_cpu=8000000UL
+
+# ============================================================
+# PIC16F886 - 28 pines, 8K (hermano menor del 887)
+# ============================================================
+p16f886.name=PIC16F886 (28 pines)
+p16f886.upload.tool=tinybld
+p16f886.upload.protocol=tinybld
+p16f886.upload.maximum_size=8192
+p16f886.upload.maximum_data_size=368
+p16f886.build.mcu=16F886
+p16f886.build.f_cpu=20000000UL
+p16f886.build.core=pic16
+p16f886.build.board=PIC16F886
+p16f886.menu.crystal.20mhz=20 MHz
+p16f886.menu.crystal.20mhz.build.f_cpu=20000000UL
+p16f886.menu.crystal.8mhz=8 MHz
+p16f886.menu.crystal.8mhz.build.f_cpu=8000000UL
+
+# ============================================================
+# PIC16F628A - 18 pines, 2K (clasico, sin ADC)
+# ============================================================
+p16f628a.name=PIC16F628A (18 pines)
+p16f628a.upload.tool=tinybld
+p16f628a.upload.protocol=tinybld
+p16f628a.upload.maximum_size=2048
+p16f628a.upload.maximum_data_size=224
+p16f628a.build.mcu=16F628A
+p16f628a.build.f_cpu=4000000UL
+p16f628a.build.core=pic16
+p16f628a.build.board=PIC16F628A
+p16f628a.menu.crystal.4mhz=4 MHz (XT)
+p16f628a.menu.crystal.4mhz.build.f_cpu=4000000UL
+p16f628a.menu.crystal.20mhz=20 MHz (HS)
+p16f628a.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC16F88 - 18 pines, 4K, con ADC (clasico moderno)
+# ============================================================
+p16f88.name=PIC16F88 (18 pines)
+p16f88.upload.tool=tinybld
+p16f88.upload.protocol=tinybld
+p16f88.upload.maximum_size=4096
+p16f88.upload.maximum_data_size=368
+p16f88.build.mcu=16F88
+p16f88.build.f_cpu=8000000UL
+p16f88.build.core=pic16
+p16f88.build.board=PIC16F88
+p16f88.menu.crystal.8mhz=8 MHz
+p16f88.menu.crystal.8mhz.build.f_cpu=8000000UL
+p16f88.menu.crystal.4mhz=4 MHz
+p16f88.menu.crystal.4mhz.build.f_cpu=4000000UL
+
+# ============================================================
+# PIC16F84A - 18 pines, 1K (el historico, educativo)
+# ============================================================
+p16f84a.name=PIC16F84A (18 pines, clasico)
+p16f84a.upload.tool=tinybld
+p16f84a.upload.protocol=tinybld
+p16f84a.upload.maximum_size=1024
+p16f84a.upload.maximum_data_size=68
+p16f84a.build.mcu=16F84A
+p16f84a.build.f_cpu=4000000UL
+p16f84a.build.core=pic16
+p16f84a.build.board=PIC16F84A
+p16f84a.menu.crystal.4mhz=4 MHz
+p16f84a.menu.crystal.4mhz.build.f_cpu=4000000UL
+
+# ============================================================
+# PIC16F690 - 20 pines, 4K (kit Low Pin Count de Microchip)
+# ============================================================
+p16f690.name=PIC16F690 (20 pines)
+p16f690.upload.tool=tinybld
+p16f690.upload.protocol=tinybld
+p16f690.upload.maximum_size=4096
+p16f690.upload.maximum_data_size=256
+p16f690.build.mcu=16F690
+p16f690.build.f_cpu=8000000UL
+p16f690.build.core=pic16
+p16f690.build.board=PIC16F690
+p16f690.menu.crystal.8mhz=8 MHz (int)
+p16f690.menu.crystal.8mhz.build.f_cpu=8000000UL
+
+# (Los PIC12F de 8 pines requieren otro Device Family Pack; no incluidos
+#  por ahora para no ofrecer chips que no compilen sin ese pack extra.)
+
+# ============================================================
+# PIC16F876A (28 pines) - hermano del 877A
+# ============================================================
+p16f876a.name=PIC16F876A (28 pines)
+p16f876a.upload.tool=tinybld
+p16f876a.upload.protocol=tinybld
+p16f876a.upload.maximum_size=8192
+p16f876a.upload.maximum_data_size=368
+p16f876a.build.mcu=16F876A
+p16f876a.build.f_cpu=20000000UL
+p16f876a.build.core=pic16
+p16f876a.build.board=PIC16F876A
+p16f876a.menu.crystal.20mhz=20 MHz
+p16f876a.menu.crystal.20mhz.build.f_cpu=20000000UL
+p16f876a.menu.crystal.4mhz=4 MHz
+p16f876a.menu.crystal.4mhz.build.f_cpu=4000000UL
+
+# ============================================================
+# PIC16F873A (28 pines)
+# ============================================================
+p16f873a.name=PIC16F873A (28 pines)
+p16f873a.upload.tool=tinybld
+p16f873a.upload.protocol=tinybld
+p16f873a.upload.maximum_size=4096
+p16f873a.upload.maximum_data_size=192
+p16f873a.build.mcu=16F873A
+p16f873a.build.f_cpu=20000000UL
+p16f873a.build.core=pic16
+p16f873a.build.board=PIC16F873A
+p16f873a.menu.crystal.20mhz=20 MHz
+p16f873a.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC16F874A (40 pines)
+# ============================================================
+p16f874a.name=PIC16F874A (40 pines)
+p16f874a.upload.tool=tinybld
+p16f874a.upload.protocol=tinybld
+p16f874a.upload.maximum_size=4096
+p16f874a.upload.maximum_data_size=192
+p16f874a.build.mcu=16F874A
+p16f874a.build.f_cpu=20000000UL
+p16f874a.build.core=pic16
+p16f874a.build.board=PIC16F874A
+p16f874a.menu.crystal.20mhz=20 MHz
+p16f874a.menu.crystal.20mhz.build.f_cpu=20000000UL

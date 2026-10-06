@@ -1,0 +1,179 @@
+# ---------------------------------------------------------------------------
+# Core PIC18F para Arduino IDE  (compila con XC8)
+# Familia PIC18 de 8 bits. Graba por PICkit (ICSP) o bootloader segun el chip.
+# ---------------------------------------------------------------------------
+
+menu.crystal=Cristal
+
+# ===== Macro helper comun =====
+# (cada placa define: name, mcu, f_cpu, maximum_size, core)
+
+# ============================================================
+# PIC18F4550 (40 pines, USB) - el mas popular con USB nativo
+# ============================================================
+p18f4550.name=PIC18F4550 (40 pines, USB)
+p18f4550.upload.tool=tinybld
+p18f4550.upload.protocol=tinybld
+p18f4550.upload.maximum_size=32768
+p18f4550.build.mcu=18F4550
+p18f4550.build.f_cpu=20000000UL
+p18f4550.build.core=pic18
+p18f4550.build.board=PIC18F4550
+p18f4550.menu.crystal.20mhz=20 MHz
+p18f4550.menu.crystal.20mhz.build.f_cpu=20000000UL
+p18f4550.menu.crystal.8mhz=8 MHz
+p18f4550.menu.crystal.8mhz.build.f_cpu=8000000UL
+
+# ============================================================
+# PIC18F2550 (28 pines, USB)
+# ============================================================
+p18f2550.name=PIC18F2550 (28 pines, USB)
+p18f2550.upload.tool=tinybld
+p18f2550.upload.protocol=tinybld
+p18f2550.upload.maximum_size=32768
+p18f2550.build.mcu=18F2550
+p18f2550.build.f_cpu=20000000UL
+p18f2550.build.core=pic18
+p18f2550.build.board=PIC18F2550
+p18f2550.menu.crystal.20mhz=20 MHz
+p18f2550.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F4520 (40 pines)
+# ============================================================
+p18f4520.name=PIC18F4520 (40 pines)
+p18f4520.upload.tool=tinybld
+p18f4520.upload.protocol=tinybld
+p18f4520.upload.maximum_size=32768
+p18f4520.build.mcu=18F4520
+p18f4520.build.f_cpu=20000000UL
+p18f4520.build.core=pic18
+p18f4520.build.board=PIC18F4520
+p18f4520.menu.crystal.20mhz=20 MHz
+p18f4520.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F2520 (28 pines)
+# ============================================================
+p18f2520.name=PIC18F2520 (28 pines)
+p18f2520.upload.tool=tinybld
+p18f2520.upload.protocol=tinybld
+p18f2520.upload.maximum_size=32768
+p18f2520.build.mcu=18F2520
+p18f2520.build.f_cpu=20000000UL
+p18f2520.build.core=pic18
+p18f2520.build.board=PIC18F2520
+p18f2520.menu.crystal.20mhz=20 MHz
+p18f2520.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F4620 (40 pines, 64K)
+# ============================================================
+p18f4620.name=PIC18F4620 (40 pines, 64K)
+p18f4620.upload.tool=tinybld
+p18f4620.upload.protocol=tinybld
+p18f4620.upload.maximum_size=65536
+p18f4620.build.mcu=18F4620
+p18f4620.build.f_cpu=20000000UL
+p18f4620.build.core=pic18
+p18f4620.build.board=PIC18F4620
+p18f4620.menu.crystal.20mhz=20 MHz
+p18f4620.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F2620 (28 pines, 64K)
+# ============================================================
+p18f2620.name=PIC18F2620 (28 pines, 64K)
+p18f2620.upload.tool=tinybld
+p18f2620.upload.protocol=tinybld
+p18f2620.upload.maximum_size=65536
+p18f2620.build.mcu=18F2620
+p18f2620.build.f_cpu=20000000UL
+p18f2620.build.core=pic18
+p18f2620.build.board=PIC18F2620
+p18f2620.menu.crystal.20mhz=20 MHz
+p18f2620.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F452 (40 pines, clasico)
+# ============================================================
+p18f452.name=PIC18F452 (40 pines, clasico)
+p18f452.upload.tool=tinybld
+p18f452.upload.protocol=tinybld
+p18f452.upload.maximum_size=32768
+p18f452.build.mcu=18F452
+p18f452.build.f_cpu=20000000UL
+p18f452.build.core=pic18
+p18f452.build.board=PIC18F452
+p18f452.menu.crystal.20mhz=20 MHz
+p18f452.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F458 (40 pines, con CAN)
+# ============================================================
+p18f458.name=PIC18F458 (40 pines, CAN)
+p18f458.upload.tool=tinybld
+p18f458.upload.protocol=tinybld
+p18f458.upload.maximum_size=32768
+p18f458.build.mcu=18F458
+p18f458.build.f_cpu=20000000UL
+p18f458.build.core=pic18
+p18f458.build.board=PIC18F458
+p18f458.menu.crystal.20mhz=20 MHz
+p18f458.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F4580 (40 pines, CAN)
+# ============================================================
+p18f4580.name=PIC18F4580 (40 pines, CAN)
+p18f4580.upload.tool=tinybld
+p18f4580.upload.protocol=tinybld
+p18f4580.upload.maximum_size=32768
+p18f4580.build.mcu=18F4580
+p18f4580.build.f_cpu=20000000UL
+p18f4580.build.core=pic18
+p18f4580.build.board=PIC18F4580
+p18f4580.menu.crystal.20mhz=20 MHz
+p18f4580.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F2455 (28 pines, USB)
+# ============================================================
+p18f2455.name=PIC18F2455 (28 pines, USB)
+p18f2455.upload.tool=tinybld
+p18f2455.upload.protocol=tinybld
+p18f2455.upload.maximum_size=24576
+p18f2455.build.mcu=18F2455
+p18f2455.build.f_cpu=20000000UL
+p18f2455.build.core=pic18
+p18f2455.build.board=PIC18F2455
+p18f2455.menu.crystal.20mhz=20 MHz
+p18f2455.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F4455 (40 pines, USB)
+# ============================================================
+p18f4455.name=PIC18F4455 (40 pines, USB)
+p18f4455.upload.tool=tinybld
+p18f4455.upload.protocol=tinybld
+p18f4455.upload.maximum_size=24576
+p18f4455.build.mcu=18F4455
+p18f4455.build.f_cpu=20000000UL
+p18f4455.build.core=pic18
+p18f4455.build.board=PIC18F4455
+p18f4455.menu.crystal.20mhz=20 MHz
+p18f4455.menu.crystal.20mhz.build.f_cpu=20000000UL
+
+# ============================================================
+# PIC18F4525 (40 pines)
+# ============================================================
+p18f4525.name=PIC18F4525 (40 pines)
+p18f4525.upload.tool=tinybld
+p18f4525.upload.protocol=tinybld
+p18f4525.upload.maximum_size=49152
+p18f4525.build.mcu=18F4525
+p18f4525.build.f_cpu=20000000UL
+p18f4525.build.core=pic18
+p18f4525.build.board=PIC18F4525
+p18f4525.menu.crystal.20mhz=20 MHz
+p18f4525.menu.crystal.20mhz.build.f_cpu=20000000UL

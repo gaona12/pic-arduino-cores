@@ -1,0 +1,8 @@
+# Manifiesto de compatibilidad - LiquidCrystal_I2C
+name=LiquidCrystal_I2C
+descripcion=LCD 16x2 por I2C (modulo PCF8574, direccion 0x27 tipica)
+requires=MSSP          # necesita modulo I2C por hardware (MSSP)
+min_ram=24
+min_flash=1024
+chips_excluidos=16F628A,16F84A   # estos NO tienen MSSP (I2C)
+nota=Conecta SDA=RC4 y SCL=RC3 con pull-ups de 4.7k

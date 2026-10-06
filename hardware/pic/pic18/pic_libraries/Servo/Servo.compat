@@ -1,0 +1,8 @@
+# Manifiesto de compatibilidad - Servo
+name=Servo
+descripcion=Control de servomotor por software (pulso 1-2 ms), estilo Arduino
+requires=DIGITAL       # solo necesita un pin GPIO
+min_ram=8
+min_flash=512
+chips_excluidos=16F84A # 1K de Flash: no cabe el core + la libreria
+nota=Un servo por instancia. Alimenta el servo con fuente aparte si consume mucho.

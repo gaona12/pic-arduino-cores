@@ -1,0 +1,9 @@
+# Manifiesto de compatibilidad - SoftwareSerial
+# Formato: CLAVE=VALOR (una por linea). Lo lee el verificador en C.
+name=SoftwareSerial
+descripcion=Puerto serie por software en pines arbitrarios (bit-banging)
+requires=DIGITAL        # solo necesita pines digitales (GPIO)
+min_ram=16             # bytes de RAM aprox
+min_flash=512          # palabras aprox
+chips_excluidos=16F84A # 1K de Flash: no cabe el core + la libreria
+nota=El baudrate maximo depende de la velocidad del cristal

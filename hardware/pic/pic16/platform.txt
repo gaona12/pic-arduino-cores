@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------
+# Plataforma PIC16 para Arduino IDE  (PIC16F877A / placa JT40P)
+# Compila con MPLAB XC8 y graba por USB con el Tiny Bootloader.
+# Las herramientas (XC8, DFP, Python) se AUTODETECTAN -> portable.
+# ---------------------------------------------------------------------------
+
+name=PIC16 (XC8 + TinyBootloader)
+version=1.1.0
+
+# Para la deteccion de librerias del IDE usamos clang (viene con macOS).
+compiler.path=/usr/bin/
+
+# --- Preprocesado: clang solo para que el IDE escanee #includes ---
+recipe.preproc.macros={runtime.platform.path}/preproc_wrapper.sh "{build.core.path}" "{build.f_cpu}" "{source_file}" "{preprocessed_file_path}" "{runtime.platform.path}"
+
+# --- Compilacion de objetos: no-op (XC8 compila todo junto en el link) ---
+recipe.c.o.pattern=/usr/bin/true
+recipe.cpp.o.pattern=/usr/bin/true
+recipe.ar.pattern=/usr/bin/true
+
+# --- Enlace REAL: el wrapper autodetecta XC8/DFP y compila sketch+core ---
+recipe.c.combine.pattern={runtime.platform.path}/compile_wrapper.sh "{build.mcu}" "{build.f_cpu}" "{build.core.path}" "{build.path}/sketch/{build.project_name}.cpp" "{build.path}/{build.project_name}.elf" "{runtime.platform.path}"
+
+# --- XC8 ya genera el .hex junto al .elf: no hay conversion ---
+recipe.objcopy.hex.pattern=/usr/bin/true
+
+# --- Reporte de tamanio real (cuenta bytes de programa del .hex) ---
+recipe.size.pattern={runtime.platform.path}/size_report.sh "{build.path}/{build.project_name}.hex"
+recipe.size.regex=Program:\s*([0-9]+)\s*bytes
+
+# ---------------------------------------------------------------------------
+# GRABADO (upload) por USB con el bootloader (Python autodetectado)
+# ---------------------------------------------------------------------------
+tools.tinybld.upload.pattern={runtime.platform.path}/upload_wrapper.sh "{serial.port}" "{build.path}/{build.project_name}.hex" "{runtime.platform.path}"
+tools.tinybld.upload.params.verbose=
+tools.tinybld.upload.params.quiet=
